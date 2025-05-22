@@ -6,8 +6,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import { getAllArticles } from '@/lib/articles'
 import { Article } from '@/components/Article'
+import { getAllArticles } from '@/lib/articles'
 
 function SocialLink({
   icon: Icon,
@@ -50,7 +50,7 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  const articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
