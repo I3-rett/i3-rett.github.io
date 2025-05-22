@@ -60,8 +60,8 @@ export default async function Home() {
             Software engineer for a living, many other things for fun.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Brett, a software engineer based in France. I work with the Javascript ecosystem (from JS to NextJS).
-            I'm passionate about learning things, from new IT stuff to game dev. I also enjoy writing about my experiences and sharing
+            I&apos;m Brett, a software engineer based in France. I work with the Javascript ecosystem (from JS to NextJS).
+            I&apos;m passionate about learning things, from new IT stuff to game dev. I also enjoy writing about my experiences and sharing
             my knowledge with others. In my free time, I mainly play strategy-like video games.
           </p>
           <div className="mt-6 flex gap-6">
