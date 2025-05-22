@@ -1,16 +1,13 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-
-import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
-import { Article } from './articles/page'
+import { getAllArticles } from '@/lib/articles'
+import { Article } from '@/components/Article'
 
 function SocialLink({
   icon: Icon,
@@ -88,7 +85,7 @@ export default async function Home() {
             Latest articles
           </h2>
           <div className="mt-6 space-y-16 divide-y divide-zinc-200 dark:divide-zinc-700">
-            {articles.slice(0, 5).map((article) => (
+            {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
