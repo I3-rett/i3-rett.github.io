@@ -7,9 +7,9 @@ export default async function ArticleLayout({
   children: React.ReactNode
 }) {
   return (
-    <Container className="mt-16 lg:mt-32">
+    <Container className="mt-8 lg:mt-8">
       <div className="xl:relative">
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto max-w-2xl flex">
           <article>
             <Prose className="mt-8" data-mdx-content>
               {children}

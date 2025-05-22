@@ -19,7 +19,8 @@ export interface ArticleWithSlug extends Article {
 
 export function getAllArticlesSlugs(): string[] {
   const articles = fs.readdirSync(path.join("src", "app", "_content"));
-  const slugs = articles.map((filename) => filename.replace(".mdx", ""));
+  const mdxFiles = articles.filter((filename) => filename.endsWith(".mdx"));
+  const slugs = mdxFiles.map((filename) => filename.replace(".mdx", ""));
   return slugs;
 }
 
