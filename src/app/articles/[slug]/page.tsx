@@ -1,39 +1,19 @@
-import fs from "node:fs";
-import path from "node:path";
-import React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
-import { getArticle } from "@/lib/articles";
-import { ArticleLayout } from "@/components/ArticleLayout";
+import { getAllArticlesSlugs } from "@/lib/articles"
 
-export const dynamic = 'force-static'; // optional, for clarity
-
-type Props = {
-    params: { slug: string };
-};
-
-export async function generateMetadata(
-    { params }: Props,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
-    const article = await getArticle(params);
-    return {
-        title: article.metadata.title,
-        description: article.metadata.description,
-    };
-}
-export async function generateStaticParams() {
-    const files = fs.readdirSync(path.join("src", "app", "articles", "_mdx"));
-    const params = files.map((filename) => ({
-        slug: filename.replace(".mdx", ""),
+export function generateStaticParams() {  // Remove async if not needed
+    const slugs = getAllArticlesSlugs();
+    return slugs.map((slug: string) => ({
+        slug: slug
     }));
+}
+export default async function Page({
+    params,
+}: {
+    params: { slug: string }  // This should also be an object, not a string
+}) {
+    const { default: Article } = await import(`@/app/_content/${params.slug}.mdx`)
 
-    return params;
+    return <Article />
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-    const { slug } = params;
-
-    const article = await getArticle({ slug });
-
-    return <ArticleLayout article={article} />;
-}
+export const dynamicParams = false

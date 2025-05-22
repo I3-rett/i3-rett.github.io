@@ -315,7 +315,7 @@
     refractor "^3.4.0"
     unist-util-visit "^2.0.3"
 
-"@mdx-js/loader@^3.0.0":
+"@mdx-js/loader@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-3.1.0.tgz#715fdab11d0c9567e45049c16a7d9c83cec88214"
   integrity sha512-xU/lwKdOyfXtQGqn3VnJjlDrmKXEvMi1mgYxVmukEUtVycIz1nh7oQ40bKTd4cA7rLStqu0740pnhGYxGoqsCg==
@@ -353,7 +353,7 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
-"@mdx-js/react@^3.0.0":
+"@mdx-js/react@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.1.0.tgz#c4522e335b3897b9a845db1dbdd2f966ae8fb0ed"
   integrity sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==
@@ -381,10 +381,10 @@
   dependencies:
     glob "10.3.10"
 
-"@next/mdx@^14.0.4":
-  version "14.2.29"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.29.tgz#e96ef1752ad2355ec50a55d54334b82968c7b345"
-  integrity sha512-pXJzTP7N8sJQGjNb8lYFr+vlDLpGu9HS0Z3m5n9fYRMdr4H3H70ONd0Bi5+wYgPUnc2PPt6oila0gBdOLMI0rg==
+"@next/mdx@^15.3.2":
+  version "15.3.2"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-15.3.2.tgz#3ecb4e6d563304941ad026cfdb1462bf808003ac"
+  integrity sha512-D6lSSbVzn1EiPwrBKG5QzXClcgdqiNCL8a3/6oROinzgZnYSxbVmnfs0UrqygtGSOmgW7sdJJSEOy555DoAwvw==
   dependencies:
     source-map "^0.7.0"
 
@@ -740,7 +740,7 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/mdx@^2.0.0":
+"@types/mdx@^2.0.0", "@types/mdx@^2.0.13":
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.13.tgz#68f6877043d377092890ff5b298152b0a21671bd"
   integrity sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==

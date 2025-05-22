@@ -105,7 +105,7 @@ function NavItem({
   href: string
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
+  const pathname = usePathname() || '/';
   const isActive = pathname === href || pathname.startsWith(`${href}/`);
 
   return (

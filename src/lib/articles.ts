@@ -17,21 +17,21 @@ export interface ArticleWithSlug extends Article {
   slug: string
 }
 
-function getAllArticlesSlugs(): string[] {
-  const articles = fs.readdirSync(path.join("src", "app", "articles", "_mdx"));
+export function getAllArticlesSlugs(): string[] {
+  const articles = fs.readdirSync(path.join("src", "app", "_content"));
   const slugs = articles.map((filename) => filename.replace(".mdx", ""));
   return slugs;
 }
 
-export async function getArticle({ slug }: { slug: string }): Promise<ArticleWithSlug> {
+async function getArticle({ slug }: { slug: string }): Promise<ArticleWithSlug> {
   try {
-    const mdxPath = path.join("src", "app", "articles", "_mdx", `${slug}.mdx`);
+    const mdxPath = path.join("src", "app", "_content", `${slug}.mdx`);
     if (!fs.existsSync(mdxPath)) {
       throw new Error(`MDX file for slug ${slug} does not exist`);
     }
 
-    const { metadata } = await import(`@/app/articles/_mdx/${slug}.mdx`);
-    const MDXContent = dynamic(() => import(`@/app/articles/_mdx/${slug}.mdx`));
+    const { metadata } = await import(`@/app/_content/${slug}.mdx`);
+    const MDXContent = dynamic(() => import(`@/app/_content/${slug}.mdx`));
     return {
       slug,
       metadata: metadata,
