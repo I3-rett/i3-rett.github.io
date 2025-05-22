@@ -1,0 +1,50 @@
+<svg viewBox="0 0 64 64" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="0" dy="0" stdDeviation="1" flood-color="#7ED321"/>
+      </filter>
+    </defs>
+    
+    <!-- Main D20 body - connected diamond/icosahedron shape -->
+    <polygon points="32,8 48,24 32,56 16,24" 
+             fill="#5CB85C" 
+             stroke="#357A35" 
+             stroke-width="2"/>
+    
+    <!-- Top facet -->
+    <polygon points="32,8 16,24 32,32" 
+             fill="#7ED321" 
+             stroke="#357A35" 
+             stroke-width="1"/>
+    
+    <!-- Right facet -->
+    <polygon points="32,8 32,32 48,24" 
+             fill="#6BC46B" 
+             stroke="#357A35" 
+             stroke-width="1"/>
+    
+    <!-- Left bottom facet -->
+    <polygon points="16,24 32,32 32,56" 
+             fill="#4A9A4A" 
+             stroke="#357A35" 
+             stroke-width="1"/>
+    
+    <!-- Right bottom facet -->
+    <polygon points="48,24 32,32 32,56" 
+             fill="#3E8A3E" 
+             stroke="#357A35" 
+             stroke-width="1"/>
+    
+    <!-- Center highlight for pixel effect -->
+    <rect x="30" y="30" width="4" height="4" fill="#8FE48F"/>
+    
+    <!-- Single B shape -->
+    <text x="32" y="32" text-anchor="middle"
+          fill="#FFFFFF" font-size="18"
+          font-family="Arial, sans-serif"
+          font-weight="bold" 
+          dominant-baseline="middle"
+          filter="url(#glow)">
+      B
+    </text>
+  </svg>
