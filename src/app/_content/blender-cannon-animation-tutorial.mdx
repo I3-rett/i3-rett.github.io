@@ -1,0 +1,118 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import ArticleLayout from '@/components/ArticleLayout'
+import ImageList from '@/components/ImageList'
+
+export const metadata = {
+    author: 'Brett',
+    date: '2025-05-23',
+    title: 'Learning Blender 4 (Part 2): Cannon Fire Animation Tutorial',
+    description:
+        'Let\s create a cute stylized cannon tower and animate a cannonball firing in Blender.',
+    tags: ['blender', 'tutorial', 'animation'],
+};
+
+export const images = [
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/1_start_project.PNG',
+        alt: 'Project start',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/2_tower_done.PNG',
+        alt: 'Tower done',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/3_cannon.PNG',
+        alt: 'Cannon done',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/4_banner.PNG',
+        alt: 'Banner done',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/5_subdivision_and_smooth.PNG',
+        alt: 'Subdivision and smooth',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/6_stones.PNG',
+        alt: 'Stones done',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/7_camera_view.PNG',
+        alt: 'Camera view',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/8_animation_wip.PNG',
+        alt: 'Animation in progress',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/9_ball_anim.PNG',
+        alt: 'Ball animation',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/10_anim_done.PNG',
+        alt: 'Animation done',
+    },
+    {
+        imageUrl: '/blender/blender-cannon-animation-tutorial/11_colors.PNG',
+        alt: 'Colors',
+    },
+]
+
+export default function MDXPage({ children }) {
+    return <ArticleLayout>{children}</ArticleLayout>
+
+}
+
+## {metadata.title}
+
+Before this tutorial, I had close to no experience with Blender. 
+I had only used it for a few hours, and you can find my first tutorial walkthrough [here](/articles/blender-4-tutorial-sushi-master). 
+
+<iframe 
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/-tK9XOTktPs?si=w6Dpek__pdKdf-JY"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="place-self-center"
+    >
+</iframe>
+
+## Let's go !
+
+Even if the tutorial is for Blender 3.3, I will use the version 4.4.3 (latest at the time of writing). 
+
+## The cannon tower 
+
+I needed to install an add-on to be able to create a *round cube*.
+
+In Edit > Preferences > Get Extensions, search for *Extra Mesh Objects* and enable it.
+
+Then, in the 3D viewport, press `Shift + A` to open the add menu and select *Mesh > Round Cube*.
+
+## Timelapse
+
+<ImageList images={images} />
+
+## Final result
+
+<iframe 
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/10pAuW8j7sw?si=Si8Np2JMNl3mXU0W"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="place-self-center"
+    >
+</iframe>
+
+<div className="flex justify-center mt-4 mb-8">
+    <Link href="/blender/blender-cannon-animation-tutorial/cannon-anim.blend">Download the Blender file</Link>.
+</div>
