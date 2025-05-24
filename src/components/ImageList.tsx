@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export interface ImageListProps {
   images: {
-    alt: string
+    alt?: string
     imageUrl: string
   }[]
 }
@@ -23,7 +23,7 @@ export default function ImageList({
                 src={image.imageUrl}
                 width={500}
                 height={500}
-                alt={image.alt}
+                alt={image.alt || 'Image'}
                 className="h-full w-full rounded-none object-cover object-center transition-transform duration-300 ease-in-out hover:scale-105"
               />
             </Link>

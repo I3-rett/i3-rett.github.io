@@ -1,0 +1,79 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import ArticleLayout from '@/components/ArticleLayout'
+import ImageList from '@/components/ImageList'
+
+export const metadata = {
+    author: 'Brett',
+    date: '2025-05-23',
+    title: 'Learning Blender 4 (Part 3): Low Poly Airplane Tutorial',
+    description:
+        'Let\'s use Blender\'s mesh modeling tools to quickly create a simple low poly airplane in Blender.',
+    tags: ['blender', 'tutorial', 'animation'],
+};
+
+export const images = [
+    {
+        imageUrl: '/blender/low-poly-airplane/1.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/2.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/3.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/4.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/5.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/6.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/7.PNG',
+    },
+    {
+        imageUrl: '/blender/low-poly-airplane/8.PNG',
+    },
+]
+
+export default function MDXPage({ children }) {
+    return <ArticleLayout>{children}</ArticleLayout>
+
+}
+
+## {metadata.title}
+
+This is my third Blender tutorial, and I am still learning the basics of this software. I am not an expert, but I am having a lot of fun creating low poly models.
+I had only used it for a few hours, and you can find my latest tutorial walkthrough [here](/articles/blender-cannon-animation-tutorial). 
+
+<iframe 
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/FkaVtOkLJoI?si=KroVMAXQtFmAtRzo"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="place-self-center"
+    >
+</iframe>
+
+Last time, I created a cannon animation, and this time, I will create a low poly airplane, following the [Low Poly Airplane Tutorial](https://www.youtube.com/watch?v=FkaVtOkLJoI&ab_channel=PolygonRunway) by Polygon Runway.
+
+## Let's go !
+
+Even if the tutorial is for Blender 3.3, I will use the version 4.4.3 (latest at the time of writing). 
+
+## Timelapse
+
+<ImageList images={images} />
+
+## Final result
+
+<div className="flex justify-center mt-4 mb-8">
+    <Link href="/blender/low-poly-airplane/airplaneLow.blend">Download the Blender file</Link>.
+</div>
