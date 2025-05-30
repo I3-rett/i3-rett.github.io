@@ -1,0 +1,84 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import ArticleLayout from '@/components/ArticleLayout'
+import ImageList from '@/components/ImageList'
+
+export const metadata = {
+    author: 'Brett',
+    date: '2025-05-24',
+    title: 'Learning Blender 4 (Part 4): Airplane Loop Animation Tutorial',
+    description:
+        'Let\'s use animation graph and particle simulation to create an airplane landing animation loop in Blender ',
+    tags: ['blender', 'tutorial', 'animation'],
+};
+
+export const images = [
+    {
+        imageUrl: '/blender/airplane-loop-animation/1.PNG',
+    },
+    {
+        imageUrl: '/blender/airplane-loop-animation/2.PNG',
+    },
+    {
+        imageUrl: '/blender/airplane-loop-animation/3.PNG',
+    },
+    {
+        imageUrl: '/blender/airplane-loop-animation/4.PNG',
+    },
+    {
+        imageUrl: '/blender/airplane-loop-animation/5.PNG',
+    },
+    {
+        imageUrl: '/blender/airplane-loop-animation/6.PNG',
+    },
+]
+
+export default function MDXPage({ children }) {
+    return <ArticleLayout>{children}</ArticleLayout>
+
+}
+
+## {metadata.title}
+
+This is my fourth Blender tutorial, and you can find my latest tutorial walkthrough [here](/articles/blender-low-poly-airplane). 
+
+<iframe 
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/cWLsHuY_PhI?si=I_VSbst2kFIaxQcY"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="place-self-center"
+    >
+</iframe>
+
+Last time, we created a low poly airplane (and added material and lights !).
+This time, we will create an flying animation out of it, following the [Airplane Loop Animation Tutorial ](https://www.youtube.com/watch?v=cWLsHuY_PhI&ab_channel=PolygonRunway) by Polygon Runway.
+
+I decided to recreate the plane from scratch, so I can use the pratice from the previous tutorial.
+
+## Timelapse
+
+<ImageList images={images} />
+
+## Final result
+
+
+<iframe 
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/JY9cME6m-Xc?si=dPpejSYIDGnYICDm"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="place-self-center"
+    >
+</iframe>
+
+
+<div className="flex justify-center mt-4 mb-8">
+    <Link href="/blender/airplane-loop-animation/airplane3.blend">Download the Blender file</Link>
+</div>
