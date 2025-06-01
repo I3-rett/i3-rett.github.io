@@ -50,7 +50,8 @@ function Photos() {
 }
 
 export default async function Home() {
-  const articles = (await getAllArticles()).slice(0, 4)
+  const allArticles = await getAllArticles();
+  const articles = allArticles.slice(0, 4);
 
   return (
     <>
@@ -82,7 +83,7 @@ export default async function Home() {
       <Container className="mt-8">
         <div className="max-w-2xl">
           <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-            Latest articles
+            Latest articles <span className="text-zinc-500 dark:text-zinc-400">({articles.length} out of {allArticles.length} total)</span>
           </h2>
           <div className="mt-6 space-y-16 divide-y divide-zinc-200 dark:divide-zinc-700">
             {articles.map((article) => (

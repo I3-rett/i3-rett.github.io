@@ -51,5 +51,10 @@ export async function getAllArticles(): Promise<ArticleWithSlug[]> {
       return await getArticle({ slug });
     }),
   );
+  articles.sort((a, b) => {
+    const dateA = new Date(a.metadata.date);
+    const dateB = new Date(b.metadata.date);
+    return dateB.getTime() - dateA.getTime(); // Sort by date descending
+  });
   return articles;
 }
